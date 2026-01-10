@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 262 45% 6%;
+  --foreground: 260 28% 88%;
+  --card: 262 30% 12%;
+  --card-foreground: 260 28% 88%;
+  --popover: 262 30% 12%;
+  --popover-foreground: 260 28% 88%;
+  --primary: 275 70% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 260 26% 18%;
+  --secondary-foreground: 260 28% 88%;
+  --muted: 262 20% 20%;
+  --muted-foreground: 262 14% 60%;
+  --accent: 288 68% 56%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 262 18% 20%;
+  --input: 262 18% 20%;
+  --ring: 275 70% 55%;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.04em;
+  }
+
+  .text-gradient-violet {
+    background: linear-gradient(180deg, #f2d7ff 0%, #8b5cf6 55%, #5b21b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background:
+      radial-gradient(circle at top, rgba(139, 92, 246, 0.3) 0%, rgba(10, 8, 18, 0) 55%),
+      linear-gradient(180deg, rgba(91, 33, 182, 0.18) 0%, rgba(10, 8, 18, 0) 65%);
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, rgba(45, 24, 76, 0.6) 0%, rgba(26, 20, 44, 0.9) 100%);
+  }
+
+  .guide-card-gradient-1 {
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.35) 0%, rgba(22, 16, 36, 1) 100%);
+  }
+
+  .guide-card-gradient-2 {
+    background: linear-gradient(180deg, rgba(168, 85, 247, 0.32) 0%, rgba(22, 16, 36, 1) 100%);
+  }
+
+  .stat-card {
+    @apply relative overflow-hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .panel-card {
+    background: rgba(26, 20, 44, 0.8);
+    border: 1px solid rgba(85, 58, 140, 0.5);
+    border-radius: 0.9rem;
+  }
+
+  .tag-pill {
+    background: rgba(27, 20, 48, 0.9);
+    border: 1px solid rgba(85, 58, 140, 0.6);
+    border-radius: 999px;
+    color: #d5c7ff;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  .ghost-button {
+    border: 1px solid rgba(139, 92, 246, 0.45);
+    color: #d5c7ff;
+  }
+}
