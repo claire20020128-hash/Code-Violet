@@ -1,4 +1,5 @@
-# ignore sop documents
-sopÎÄµµ/
+# ignore sop documents except the classification file
+sopÎÄµµ/*
+!sopÎÄµµ/Keyword classification.md
 # ignore local pictures
 pictures/
